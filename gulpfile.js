@@ -23,7 +23,7 @@ gulp.task('browser-sync', function() {
 		// tunnel: true, tunnel: 'projectname', // Demonstration page: http://projectname.localtunnel.me
 	})
 });
-function bsReload(done) { browserSync.reload(); done(); };
+function bsReload(done) { browserSync.reload(); done(); }
 
 // Custom Styles
 gulp.task('styles', function() {
@@ -39,7 +39,7 @@ gulp.task('styles', function() {
 	}))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
 	.pipe(gulp.dest('app/css'))
-	.pipe(browserSync.stream())
+	.pipe(browserSync.stream());
 });
 
 // Scripts & JS Libraries
